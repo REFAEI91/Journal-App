@@ -3,21 +3,31 @@ export default function EntryForm() {
   return (
     <>
       <form className="form">
-        NEW ENTRY
+        <label className="title" for="Title">
+          NEW ENTRY
+        </label>
         <br />
         <label className="motto" for="Motto">
-          Motto:
+          Motto
         </label>
-        <textarea className="textarea" name="Motto" />
+        <textarea className="inputs" name="motto" id="motto" />
         <br />
-        <label for="Notes">Notes: </label>
-        <textarea className="textarea" name="Notes" />
+        <label for="notes" className="notes_title">
+          Notes
+        </label>
+        <textarea className="inputs" name="notes" id="notes" />
         <br />
-        <Button />
+        <div className="button_center">
+          <Button />
+        </div>
       </form>
     </>
   );
 }
 function Button() {
-  return <button type="submit">Create</button>;
+  return (
+    <button className="button" type="submit">
+      Create
+    </button>
+  );
 }
