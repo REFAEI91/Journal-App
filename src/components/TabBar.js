@@ -3,17 +3,17 @@ import { useState } from "react";
 import { ReactComponent as StarFilled } from "./star-filled.svg";
 import { ReactComponent as Star } from "./star.svg";
 export default function TabBar(entry) {
-  const [isFilled, setIsFilled] = useState(false);
+  const [isFavorite, setisFavorite] = useState(false);
   return (
     <div className="tab">
       <button
         type="button"
         className="star"
         onClick={() => {
-          setIsFilled(!isFilled);
+          setisFavorite(!isFavorite);
         }}
       >
-        {isFilled ? <StarFilled /> : <Star />}
+        {isFavorite ? <StarFilled /> : <Star />}
       </button>
       <p className="date">{entry.date}</p>
       <h3 className="title">{entry.motto}</h3>
