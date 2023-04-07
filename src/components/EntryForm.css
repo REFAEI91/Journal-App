@@ -1,0 +1,67 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  padding: 5%;
+}
+
+.button_center {
+  display: flex;
+  justify-content: center;
+}
+
+.motto {
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+}
+
+.textarea {
+  max-width: 100%;
+  display: inline-block;
+  margin: 10px 0px 10px 0px;
+  border: 2px groove var(--color-water-10);
+  border-radius: 6px;
+  font: inherit;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.notes_title {
+  margin-top: 30px;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+}
+
+.notes_input {
+  max-width: 100%;
+  display: inline-block;
+  margin: 10px 0px 10px 0px;
+  border: 1px solid var(--color-water-10);
+  border-radius: 6px;
+  font: inherit;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.button {
+  justify-content: center;
+  background-color: var(--color-nemo);
+  color: var(--color-foam);
+  width: 160px;
+  font-size: large;
+  font-weight: bold;
+  padding: 15px 15px 15px 15px;
+  border: none;
+  margin: 30px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--color-nemo-dark);
+}
