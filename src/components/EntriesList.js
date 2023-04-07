@@ -1,15 +1,4 @@
-import TabBar from "./TabBar.js";
-export default function EntriesSection() {
-  return (
-    <>
-      <div className="title">All Entries 3 --- Favorutes</div>
-      {Entries.map(({ id, date, motto, notes }) => (
-        <TabBar key={id} date={date} motto={motto} notes={notes} />
-      ))}
-    </>
-  );
-}
-export const Entries = [
+export const entries = [
   {
     id: 1000,
     date: "Feb 5, 2025",

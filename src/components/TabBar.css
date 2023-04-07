@@ -16,6 +16,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  font-weight: 600;
 }
 
 .bottom {
@@ -24,8 +25,14 @@
 
 .star {
   display: flex;
-  flex-direction: column;
   flex-direction: row-reverse;
   border: none;
   background: none;
+}
+.star:hover {
+  background-color: var(--color-water);
+}
+
+.star:active {
+  background-color: var(--color-water-10);
 }

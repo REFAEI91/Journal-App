@@ -1,15 +1,11 @@
 import "./TabBar.css";
 import { useState } from "react";
-import star from "./star.svg";
-import starfilled from "./star-filled.svg";
-export default function TabBar() {
+import { ReactComponent as StarFilled } from "./star-filled.svg";
+import { ReactComponent as Star } from "./star.svg";
+export default function TabBar(entry) {
   const [isFilled, setIsFilled] = useState(false);
   return (
     <div className="tab">
-      <date className="date" type="date">
-        {new Date().getDate()}.{new Date().getMonth() + 1}.
-        {new Date().getFullYear()}
-      </date>
       <button
         type="button"
         className="star"
@@ -17,15 +13,11 @@ export default function TabBar() {
           setIsFilled(!isFilled);
         }}
       >
-        {isFilled ? (
-          <img src={starfilled} alt="star filled" />
-        ) : (
-          <img src={star} alt="star" />
-        )}
+        {isFilled ? <StarFilled /> : <Star />}
       </button>
-
-      <h3 className="title">"That's life in the city"</h3>
-      <p> Si sine causak dkjls skdjlkdf </p>
+      <p className="date">{entry.date}</p>
+      <h3 className="title">{entry.motto}</h3>
+      <p> {entry.notes}</p>
       <p className="bottom"></p>
     </div>
   );
